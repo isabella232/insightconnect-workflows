@@ -8,7 +8,7 @@ Sample Slack Trigger Commands:
 
 # Key Features
 
-* Suspend an Azure AD user directly from Slack
+* Suspend an Azure AD user directly from Microsoft Teams
 
 # Requirements
 
