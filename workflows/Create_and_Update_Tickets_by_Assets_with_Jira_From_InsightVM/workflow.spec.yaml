@@ -2,7 +2,7 @@ extension: workflow
 products: ["insightconnect","InsightVM"]
 name: Create_and_Update_Tickets_by_Assets_with_Jira_From_InsightVM
 title: "Create and Update Tickets by Assets with Jira From InsightVM"
-description: Reset a user's Azure AD password with a simple command in Microsoft Teams.
+description: Create tickets in Jira for the top 25 most vulnerable assets scanned within the last 30 days.
 version: 1.0.0
 vendor: rapid7
 support: rapid7

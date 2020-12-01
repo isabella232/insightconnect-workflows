@@ -1,17 +1,18 @@
 # Description
 
-Create teckets in Jira 
+Create tickets in Jira for the top 25 most vulnerable assets scanned within the last 30 days.
+
 
 # Key Features
 
-* **Break the Kill Chain** - Credentials provide attackers with easy access to numerous targets. Disabling a compromised account or forcing a password reset can quickly and effectively interrupt an attacker’s kill chain.
-* **Minimize Disruption to the User** - Forcing a user to reset their password is a small inconvenience compared to re-imaging their entire system. Acting fast can save valuable time and teach a valuable lesson without a noticeable impact to your business.
-* **Make Persistence Inconsistent** - Attackers love using credentials for persistent access to networks or cloud applications. Changing a compromised password is the easiest way to cut off an attacker’s access to your systems and data.
+* Find the 25 most vulnerable assets scanned within the last 30 days.
+* Find solutions for the top 10 vulnerabilities on each asset
+* Create a Jira ticket for each asset containing it's vulnerability solutions
 
 # Requirements
 
-* [Microsoft Teams](https://insightconnect.help.rapid7.com/docs/microsoft-teams)
-* Azure AD connection
+* InsightVM
+* Jira
 
 # Documentation
 
@@ -19,9 +20,9 @@ Create teckets in Jira
 
 Import the workflow from the Rapid7 Extension Library and proceed through the Import Workflow wizard in InsightConnect. Import plugins, create or select connections, and rename the workflow as a part of the Import Workflow wizard as necessary.
 
-Once the workflow has been imported, **each Microsoft Teams step will need the team name and channel name updated to suit your Teams environment!** Edit the input with the preset text of `change_me` in each Teams step in the workflow.
+Once the workflow has been imported, the Create Jira Ticket step will need to be configured. In the step the Project input will need to be changed from `change_me` to an appropriate project ID.
 
-After configuring the Teams steps and the `Find DN` step, activate the workflow in order to trigger it.
+The frequency and time of at which the workflow runs my also be changed by editing the timer trigger. By default the workflow will run on the first day of the month at 12:01AM 
 
 ### Usage
 
@@ -38,9 +39,10 @@ Plugins utilized by workflow:
 
 |Plugin|Version|Count|
 |----|----|--------|
-|Microsoft Teams|2.0.4|2|
-|ExtractIt|2.0.0|1|
-|Azure AD Admin|2.1.1|1|
+|Jira|6.0.3|1|
+|Python 3 Script|2.0.2|2|
+|Timers|2.0.4|1|
+|Rapid7 InsightVM|4.8.1|2|
 
 ## Troubleshooting
 
@@ -48,16 +50,11 @@ _There is no troubleshooting information at this time_
 
 # Version History
 
-* 1.0.5 - Update to make Microsoft Teams plugin the latest version
-* 1.0.4 - Update to newest plugin versions | Update to message formatting
-* 1.0.3 - Update to fix trigger syntax and documentation
-* 1.0.2 - Update missing log entry
-* 1.0.1 - Update to fix documentation
 * 1.0.0 - Initial workflow
 
 # Links
 
 ## References
 
-* [Azure AD](https://azure.microsoft.com/en-us/services/active-directory/)
-* [Microsoft Teams](https://products.office.com/en-US/microsoft-teams/group-chat-software)
+* [InsightVM](https://www.rapid7.com/products/insightvm/)
+* [Jira](https://www.atlassian.com/software/jira)
