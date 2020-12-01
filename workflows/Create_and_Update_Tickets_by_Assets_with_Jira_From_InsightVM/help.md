@@ -1,10 +1,6 @@
 # Description
 
-Reset a user's password straight from Microsoft Teams. Respond quickly, albeit to contain a potential threat or to reset another user's locked out account.
-
-Sample Microsoft Teams Trigger Commands:
-
-`!reset_password user@example.com`
+Create teckets in Jira 
 
 # Key Features
 
