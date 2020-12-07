@@ -47,7 +47,7 @@ This will kick off the workflow and prompt you when the search is completed. If 
 
 Search criteria can be 'body', 'subject', or 'from' lines in the email. For example:
 
-`delete-emails subject="A phishy email" from="example.com" body="Click here for free stuff" `
+`delete-emails subject="A phishy email" from="example.com" body="Click here for free stuff"`
 
 Any combination of 'body', 'subject', and 'from' can be used. At least one search item must be given.
 
@@ -62,7 +62,6 @@ Plugins utilized by workflow:
 |Plugin|Version|Count|
 |----|----|--------|
 |Microsoft Office365 Email Security|2.2.1|3|
-|Python 3 Script|2.0.1|2|
 
 ## Troubleshooting
 
@@ -70,6 +69,7 @@ _There is no troubleshooting information at this time_
 
 # Version History
 
+* 1.1.0 - Replace a Python script with Pattern Match steps for argument values extraction | Remove Python script for preparing a query | Improve workflow messaging | Update screenshots
 * 1.0.3 - Change trigger command from `purge-email` to `delete-emails`
 * 1.0.2 - Changed content search query to use double quotes | Workflow no longer prompts a manual purge when 0 emails are found | Trigger no longer requires an exclamation mark | Updated documentation
 * 1.0.1 - Updated documentation
